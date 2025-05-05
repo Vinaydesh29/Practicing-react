@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import BasicClass from "./BasicClass";
 import Child from "./Child";
+import Parent from "./Parent";
 function App() {
   const [count, setCount] = useState("");
 
@@ -12,9 +13,7 @@ function App() {
   };
   return (
     <>
-      <BasicClass name="increment" setCount={handleCount} />
-
-      <p>{count}</p>
+      <Parent />
     </>
   );
 }
