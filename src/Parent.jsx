@@ -6,9 +6,7 @@ class Parent extends Component {
     val: false,
   };
   handleClick = () => {
-    this.setState((prev) => {
-      return { val: !prev.val };
-    });
+    this.setState({ val: !this.state.val });
   };
   render() {
     return (
