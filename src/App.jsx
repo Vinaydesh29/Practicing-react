@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.scss";
@@ -7,23 +7,28 @@ import Child from "./Child";
 import Parent from "./Parent";
 import styled from "styled-components";
 import Promise from "./Promise";
+import Groups from "./Groups";
+export const NameContext = createContext();
 function App() {
-  const [count, setCount] = useState("");
-
-  const handleCount = (val) => {
-    setCount(val);
+  const [val, setValue] = useState();
+  const handleChange = (e) => {
+    setValue(e.target.value);
   };
-  const Para = styled.h1`
-    ont-size: 1.5em;
-    text-align: center;
-    color: #bf4f74;
-  `;
+  const [name, setName] = useState("");
+  const handleSubmit = () => {
+    setName(val);
+  };
+  const [theme, setTheme] = useState("light");
+  const handleTheme = () => {
+    setTheme((pev) => (pev === "light" ? "dark" : "light"));
+  };
   return (
-    <>
-      <Parent />
-      <Para> im using styled component</Para>
-      <Promise />
-    </>
+    <NameContext.Provider value={{ name, theme }}>
+      <input type="text" onChange={handleChange} />
+      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleTheme}>ChangeTheme</button>
+      <Groups />
+    </NameContext.Provider>
   );
 }
 
