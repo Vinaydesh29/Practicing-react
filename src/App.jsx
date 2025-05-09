@@ -13,6 +13,7 @@ import UseRef from "./UseRef";
 import UseCallBack from "./UseCallBack";
 import Input from "./Input";
 import Local from "./Local";
+import ControlForm from "./ControlForm";
 export const NameContext = createContext();
 function App() {
   const [val, setValue] = useState();
@@ -34,7 +35,7 @@ function App() {
     //   <button onClick={handleTheme}>ChangeTheme</button>
     //   <Groups />
     // </NameContext.Provider>
-    <Local />
+    <ControlForm />
   );
 }
 
