@@ -8,6 +8,7 @@ function ControlForm() {
   };
   return (
     <form onSubmit={handleSubmit}>
+      <h1>Control</h1>
       <input type="text" ref={val} />
       <button type="submit">Submit</button>
     </form>

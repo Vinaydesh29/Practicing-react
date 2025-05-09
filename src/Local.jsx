@@ -11,6 +11,7 @@ function Local() {
   }, []);
   return (
     <>
+      <h1>Local</h1>
       <input type="text" onChange={(e) => setInput(e.target.value)} />
       <button onClick={handleCLick}> submit -{input}</button>
       <p>{get}</p>
