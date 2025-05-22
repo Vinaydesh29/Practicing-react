@@ -16,6 +16,7 @@ import Local from "./Local";
 import ControlForm from "./ControlForm";
 import Router from "./Router";
 import Link from "./Link";
+import Call from "./Call";
 export const NameContext = createContext();
 function App() {
   const [val, setValue] = useState();
@@ -38,8 +39,7 @@ function App() {
     //   <Groups />
     // </NameContext.Provider>
     <>
-      <Router />
-      <Link />
+      <Call />
     </>
   );
 }
