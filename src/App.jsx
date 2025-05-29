@@ -32,15 +32,12 @@ function App() {
     setTheme((pev) => (pev === "light" ? "dark" : "light"));
   };
   return (
-    // <NameContext.Provider value={{ name, theme }}>
-    //   <input type="text" onChange={handleChange} />
-    //   <button onClick={handleSubmit}>Submit</button>
-    //   <button onClick={handleTheme}>ChangeTheme</button>
-    //   <Groups />
-    // </NameContext.Provider>
-    <>
-      <Call />
-    </>
+    <NameContext.Provider value={{ name, theme }}>
+      <input type="text" onChange={handleChange} />
+      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleTheme}>ChangeTheme</button>
+      <Groups />
+    </NameContext.Provider>
   );
 }
 
