@@ -1,8 +1,8 @@
 function Blind(){
-   const val = function(){
-    console.log("hello " + this.name);
+   const val = function(city,country){
+    console.log(`${this.name}  ${city}  ${country}`);
    }
    const obj = {name:"sai"}
-   val.call(obj)
+   val.call(obj,'hyd',"india")
 }
 export default Blind
