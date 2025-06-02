@@ -17,6 +17,7 @@ import ControlForm from "./ControlForm";
 import Router from "./Router";
 import Link from "./Link";
 import Call from "./Call";
+import Blind from "./Blind";
 export const NameContext = createContext();
 function App() {
   const [val, setValue] = useState();
@@ -32,12 +33,13 @@ function App() {
     setTheme((pev) => (pev === "light" ? "dark" : "light"));
   };
   return (
-    <NameContext.Provider value={{ name, theme }}>
-      <input type="text" onChange={handleChange} />
-      <button onClick={handleSubmit}>Submit</button>
-      <button onClick={handleTheme}>ChangeTheme</button>
-      <Groups />
-    </NameContext.Provider>
+    // <NameContext.Provider value={{ name, theme }}>
+    //   <input type="text" onChange={handleChange} />
+    //   <button onClick={handleSubmit}>Submit</button>
+    //   <button onClick={handleTheme}>ChangeTheme</button>
+    //   <Groups />
+    // </NameContext.Provider>
+    <Blind />
   );
 }
 
